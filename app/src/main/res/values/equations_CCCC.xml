@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CCCC_formulaCiclo">D = Ton/T = Vo/Vin</string>
+
+    <string name="CCCC_formulaTensaoEntrada">Vin = Vo(avg)/D</string>
+    <string name="CCCC_formulaCorrenteEntrada">Is = Io(avg)*D</string>
+
+    <string name="CCCC_formulaTensaoMedia">Vo(avg) = D*Vin</string>
+    <string name="CCCC_formulaCorrenteMedia">Io(avg) = Vo(avg)/R</string>
+
+    <string name="CCCC_formulaCorrenteChaveamento">Ich = Io*D</string>
+    <string name="CCCC_formulaCorrenteDiodo">ID = Io*(1-D)</string>
+
+    <string name="CCCC_potenciaEntrada">Pin = Vin*Is</string>
+    <string name="CCCC_potenciaSaida">Po = Vo(avg)*Io(avg)</string>
+
+    <string name="CCCC_formulaOscilacaoCorrente">\u0394Io = (Vo(avg)*(1-D)) / (L*f)</string>
+    <string name="CCCC_formulaOscilacaoTensao">\u0394Vo = (Vo(avg)*(1-D)) / (8*L*C*f²)</string>
+
+    <string name="CCCC_formulaIndutancia">L = (Vo(avg)*(1-D)) / (f*\u0394Io)</string>
+    <string name="CCCC_formulaCapacitancia">C = (Vo(avg)*(1-D)) / (8*L*\u0394Vo*f²)</string>
+
+    <string name="CCCC_formulaIndutanciaMin">Lmin = ((1-D)*R) / (2*f)</string>
+    <string name="CCCC_formulaCapacitanciaMin">Cmin = (1-D) / (16*L*f²)</string>
+</resources>

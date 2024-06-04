@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="monofasicoM_formulaTensaoMedia">Fórmula:\n\nV0(DC) = Vp/\u03C0</string>
+    <string name="monofasicoM_formulaCorrenteMedia">Fórmula:\n\nI0(DC) = V0(DC)/R</string>
+
+    <string name="monofasicoM_formulaTensaoEficaz">Fórmula:\n\nV0(rms) = Vp/2</string>
+    <string name="monofasicoM_formulaCorrenteEficaz">Fórmula:\n\nI0(rms) = V0(rms)/R</string>
+
+    <string name="monofasicoM_formulaTensaoCA">Fórmula:\n\nV0(AC) = \u221a(V0(rms)² - V0(DC)²)</string>
+    <string name="monofasicoM_formulaCorrenteCA">Fórmula:\n\nI0(AC) = V0(AC)/R</string>
+</resources>

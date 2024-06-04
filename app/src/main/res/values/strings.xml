@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">App Didatico -TCC</string>
+    <string name="sizing_explanation">A seguir é possível realizar o dimensionamento dos mais diferentes tipos de conversores existentes. \n\nPor favor, selecione abaixo a opção que mais se encaixa no seu caso de uso atual!</string>
+    <string name="eta">\u03b7</string>
+    <string name="square_root_symbol">\u221a</string>
+    <string name="pi">\u03C0</string>]
+    <string name="delta">\u0394</string>
+    <string name="micro">\u00b5</string>
+    <string name="ohm">\u03a9</string>
+
+    <string name="miliNotation">*10\u207B³</string>
+    <string name="microNotation">*10\u207B\u2076</string>
+    <string name="nanoNotation">*10\u207B\u2079</string>
+    <string name="picoNotation">*10\u207B¹²</string>
+    <string name="kiloNotation">*10³</string>
+    <string name="megaNotation">*10\u2076</string>
+    <string name="gigaNotation">*10\u2079</string>
+    <string name="teraNotation">*10¹²</string>
+
+    <!--"Simple" Text Values-->
+    <string name="loadValues">Valores da Carga:</string>
+    <string name="outRMSValues">Valores RMS de Saída:</string>
+    <string name="activeReactivePower">Potência Ativa e Reativa:</string>
+    <string name="apparentPower">Potência Aparente</string>
+    <string name="outLineValues">Valores de Saída (Linha):</string>
+    <string name="outPhaseValues">Valores de Saída (Fase):</string>
+
+    <!--Unidades-->
+    <string name="semUnidade">(Sem Unidade)</string>
+    <string name="unidadePercentual">(% - Percentual)</string>
+    <string name="unidadeTensao">(V - Volts)</string>
+    <string name="unidadeResistencia">(\u03a9 - Ohms)</string>
+    <string name="unidadeIndutancia">(mH - Milihenry)</string>
+    <string name="unidadeCapacitancia">(\u00b5F - Microfarads)</string>
+    <string name="unidadeFrequencia">(Hz - Hertz)</string>
+
+    <!--Conversor Parameters Texts-->
+    <string name="tensaoVs">Tensão da Fonte (Vs)</string>
+    <string name="tensaoVl">Tensão de Linha (VL)</string>
+    <string name="tensaoPico">Tensão de Pico (V<font size="8">p</font>)</string>
+    <string name="tensaoFonte">Tensão da Fonte/Linha</string>
+    <string name="resistenciaCarga">Resistência da Carga (R)</string>
+    <string name="deltaVo">Oscilação da Tensão (\u0394V<font size="8">o</font>)</string>
+    <string name="capacitanciaCarga">Capacitância da Carga (C)</string>
+    <string name="frequencia">Frequência (f)</string>
+
+    <string name="tensaoEntrada">Tensão de Entrada (V<font size="8">in</font>)</string>
+    <string name="tensaoSaida">Tensão de Saída (V<font size="8">out</font>)</string>
+    <string name="cicloTrabalho">Ciclo de Trabalho (D)</string>
+    <string name="indutanciaCarga">Indutância da Carga (L)</string>
+    <string name="indutanciaFiltro">Indutância do Filtro (L)</string>
+    <string name="capacitanciaFiltro">Capacitância do Filtro (C)</string>
+    <string name="frequenciaChaveamento">Frequência de Chaveamento (f)</string>
+    <string name="deltaIo">Oscilação da Corrente (\u0394I<font size="8">o</font>)</string>
+
+    <string name="modulacaoAmplitude">Modulação em Aplitude (m<font size="8">a</font>)</string>
+
+</resources>

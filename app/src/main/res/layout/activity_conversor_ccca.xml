@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    tools:context=".ConversorCCCA">
+
+    <ImageButton
+        android:id="@+id/voltar_ccca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Inversores"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <ScrollView
+        android:id="@+id/parametersCCCA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline2">
+
+            <LinearLayout
+                android:id="@+id/box_tipo_CCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Inversor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/tipoCCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/box_cargaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Carga" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/cargaCCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/box_mon_modulacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Modulação" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/modulacaoCCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_tri_ligacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Ligação da Carga" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/ligacaoCCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_dadosCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dados Disponíveis" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/dadosCCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--    Amplitude Modulation    -->
+            <TextView
+                android:id="@+id/texto_modulacaoAmplitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/modulacaoAmplitude"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editModulacaoAmplitudeCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/semUnidade"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <!--    Voltage     -->
+            <TextView
+                android:id="@+id/texto_tensaoEntradaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tensaoEntrada"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editTensaoEntradaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeTensao"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <!--    Resistance     -->
+            <TextView
+                android:id="@+id/texto_resistenciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/resistenciaCarga"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editResistenciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeResistencia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <!--    Indutance     -->
+            <TextView
+                android:id="@+id/texto_indutanciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/indutanciaCarga"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editIndutanciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeIndutancia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <!--    Frequency     -->
+            <TextView
+                android:id="@+id/texto_frequenciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/frequencia"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editFrequenciaCCCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeFrequencia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <Button
+        android:id="@+id/continuar_ccca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#74ad85"
+        android:text="Resultados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

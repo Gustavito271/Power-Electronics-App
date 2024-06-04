@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_initialVoltage">tensaoEntrada</string>
+    <string name="key_voltageP">tensaoP</string>
+    <string name="key_resistance">resistencia</string>
+    <string name="key_type">tipo</string>
+    <string name="key_wave">onda</string>
+    <string name="key_load">carga</string>
+    <string name="key_voltageOscilation">deltaVo</string>
+    <string name="key_frequency">frequencia</string>
+    <string name="key_capacitance">capacitancia</string>
+    <string name="key_cycle">ciclo</string>
+    <string name="key_finalVoltage">tensaoSaida</string>
+    <string name="key_loadIndutance">indutanciaCarga</string>
+    <string name="key_currentOscilation">deltaIo</string>
+    <string name="key_filterIndutance">indutanciaFiltro</string>
+    <string name="key_amplitudeModulation">modulacaoAmplitude</string>
+    <string name="key_format">formato</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculationsPage">
+
+    <LinearLayout
+        android:id="@+id/box_text_calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:background="@drawable/round_corner"
+        android:elevation="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        tools:layout_editor_absoluteX="35dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sizing_explanation"
+             />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/box_text_calc"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:layout_editor_absoluteX="20dp">
+
+        <Button
+            android:id="@+id/btn_convCACC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#74ad85"
+            android:text="Conversores CA/CC" />
+
+        <Button
+            android:id="@+id/btn_convCCCC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#74ad85"
+            android:text="Conversores CC/CC" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_convCACA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#74ad85"
+            android:text="Conversores CA/CA" />
+
+        <Button
+            android:id="@+id/btn_convCCCA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#74ad85"
+            android:text="Conversores CC/CA" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/voltar_conv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

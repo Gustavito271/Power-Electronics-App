@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="monofasicoC_formulaTensaoMedia">Fórmula:\n\nV0(DC) = (2*Vp)/\u03C0</string>
+    <string name="monofasicoC_formulaCorrenteMedia">Fórmula:\n\nI0(DC) = V0(DC)/R</string>
+
+    <string name="monofasicoC_formulaTensaoEficaz">Fórmula:\n\nV0(rms) = Vp/\u221a2</string>
+    <string name="monofasicoC_formulaCorrenteEficaz">Fórmula:\n\nI0(rms) = V0(rms)/R</string>
+
+    <string name="monofasicoC_formulaTensaoCA">Fórmula:\n\nV0(AC) = \u221a(V0(rms)² - V0(DC)²)</string>
+    <string name="monofasicoC_formulaCorrenteCA">Fórmula:\n\nI0(AC) = V0(AC)/R</string>
+
+    <string name="monofasicoC_formulaCorrenteEficaz2">Fórmula:\n\nI0(rms) = I0(DC)</string>
+    <string name="monofasicoC_formulaCorrenteCA2">Fórmula:\n\nI0(AC) = 0</string>
+
+    <string name="monofasicoC_formulaTensaoMedia2">Fórmula:\n\nV0(DC) = Vp</string>
+    <string name="monofasicoC_formulaTensaoEficaz2">Fórmula:\n\nV0(rms) = Vp</string>
+
+    <string name="monofasicoC_formulaTensaoCA2">Fórmula:\n\nV0(AC) = 0</string>
+
+    <string name="monofasicoC_formulaCorrenteDiodoFAV">Fórmula:\n\nIF(rms) = I0(DC)/2</string>
+    <string name="monofasicoC_formulaCorrenteDiodoRMS">Fórmula:\n\nIF(AV) = I0(rms)/\u221a2</string>
+</resources>

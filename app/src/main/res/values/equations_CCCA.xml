@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CCCA_equationVoltage">Vo(rms) = ma*(Vs(CC)/\u221a2)</string>
+    <string name="CCCA_equationCurrent">Io(rms) = Vo(rms)/(R + jXL)</string>
+    <string name="CCCA_equationInductance">XL = 2*\u03C0*f*L</string>
+    <string name="CCCA_equationSMono">S = Vo(rms)*Io(rms)</string>
+    <string name="CCCA_equationSThree">S = \u221a3*VL*IL</string>
+    <string name="CCCA_equationP">P = Parte real da Potência Aparente (cartesiana)</string>
+    <string name="CCCA_equationQ">Q = Parte imaginária da Potência Aparente (cartesiana)</string>
+    <string name="CCCA_equationLineVoltage">VL = 0.65*ma*Vs(CC)</string>
+    <string name="CCCA_equationPhaseVoltageStar">Vf = VL/\u221a3</string>
+    <string name="CCCA_equationPhaseVoltageDelta">Vf = VL</string>
+    <string name="CCCA_equationPhaseCurrent">If = Vf/(R + jXL)</string>
+    <string name="CCCA_equationLineCurrentStar">IL = If</string>
+    <string name="CCCA_equationLineCurrentDelta">IL = If*\u221a3</string>
+</resources>

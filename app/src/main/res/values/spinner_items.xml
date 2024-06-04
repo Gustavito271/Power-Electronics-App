@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selecione">Selecione os que se aplicam</string>
+
+    <!--Spinner Common-->
+    <string name="Monophase">Monofásico</string>
+    <string name="Threephase">Trifásico</string>
+    <string name="RLoad">Carga R</string>
+    <string name="RLLoad">Carga RL</string>
+
+    <!--Spinner CACC-->
+    <string name="CACC_halfWave">Meia Onda</string>
+    <string name="CACC_fullWave">Onda Completa</string>
+    <string name="CACC_RCLoad">Carga RC</string>
+
+    <!--Spinner CCCC-->
+    <string name="CCCC_RLoad">Carga R - Sem Filtro</string>
+    <string name="CCCC_LCFilter">Carga R - Filtro LC</string>
+
+    <!--Spinner CCCA-->
+    <string name="CCCA_unipolar">Unipolar</string>
+    <string name="CCCA_bipolar">Bipolar</string>
+    <string name="CCCA_star">Estrela</string>
+    <string name="CCCA_delta">Delta</string>
+
+    <!--Spinner with Select-->
+    <string name="spinner_tensaoFonte">Tensão da Fonte / Linha</string>
+    <string name="spinner_tensaoPico">Tensão de Pico</string>
+    <string name="spinner_resistencia">Resistência da Carga</string>
+    <string name="spinner_deltaVo">Oscilação da Tensão</string>
+    <string name="spinner_capacitancia">Capacitância</string>
+    <string name="spinner_frequencia">Frequência</string>
+
+    <string name="spinner_tensaoEntrada">Tensão de Entrada</string>
+    <string name="spinner_TensaoSaida">Tensão Médida de Saída</string>
+    <string name="spinner_cicloTrabalho">Ciclo de Trabalho</string>
+    <string name="spinner_frequencia_chaveamento">Frequência de Chaveamento</string>
+    <string name="spinner_indutanciaCarga">Indutância da Carga</string>
+    <string name="spinner_deltaIo">Oscilação da Corrente</string>
+    <string name="spinner_indutanciaFiltro">Indutância do Filtro</string>
+    <string name="spinner_capacitanciaFiltro">Capacitância do Filtro</string>
+
+    <string name="spinner_modulacaoAmplitude">Modulação em Amplitude</string>
+
+</resources>

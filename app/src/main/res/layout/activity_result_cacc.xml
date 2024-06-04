@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultCACC">
+
+    <ImageButton
+        android:id="@+id/voltar_resCACC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voltar_resCACC">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/box_res_tensoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores das Tensões:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resTensaoL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resTensaoP"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_valor_medio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores Médios:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resRetMedia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteMedia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_valor_eficaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Valores Eficazes:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resRetEficaz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteEficaz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_valor_AC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Valores CA:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resTensaoAC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteAC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_potencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Rendimento:"
+                    android:textStyle="bold" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resPotenciaDC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resPotenciaAC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+
+                    <TextView
+                        android:id="@+id/resRendimento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_fator_forma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="Fator de Forma e de Ripple (Tensão) :"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/resFF"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resRF"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_fator_forma_corrente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="Fator de Forma e de Ripple (Corrente) :"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/resFFCorrente"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resRFCorrente"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_diodo_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Características do Diodo:"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/resDiodoCorrente"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resDiodoCorrente2"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resDiodoTensao"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_capDelta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Oscilação e Capacitância:"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/resDelta"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCap"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:gravity="center" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="formulaTensaoFonte">Fórmula:\n\nVs = Vp/\u221a2</string>
+    <string name="formulaTensaoLinha">Fórmula:\n\nVL = Vp/\u221a2</string>
+    <string name="formulaTensaoPicoS">Fórmula:\n\nVp = VS*\u221a2</string>
+    <string name="formulaTensaoPicoL">Fórmula:\n\nVp = VL*\u221a2</string>
+
+    <string name="formulaPotenciaMedia">Fórmula:\n\nP0(DC) = V0(DC)*I0(DC)</string>
+    <string name="formulaPotenciaEficaz">Fórmula:\n\nP0(rms) = V0(rms)*I0(rms)</string>
+    <string name="formulaRendimento">Fórmula:\n\n\u03b7 = P0(DC)/P0(rms)</string>
+
+    <string name="formulaFatorFormaTensao">Fórmula:\n\nFF = V0(rms)/V0(DC)</string>
+    <string name="formulaFatorRippleTensao">Fórmula:\n\nFR = V0(AC)/V0(DC)</string>
+
+    <string name="formulaFatorFormaCorrente">Fórmula:\n\nFF = I0(rms)/I0(DC)</string>
+    <string name="formulaFatorRippleCorrente">Fórmula:\n\nFR = I0(AC)/I0(DC)</string>
+
+    <string name="formulaTensaoDiodo">Fórmula:\n\nVRRM = 1.2*Vp</string>
+
+    <string name="formulaDeltaVo1">Fórmula:\n\n\u0394Vo(V) = \u0394Vo(%)*Vo</string>
+    <string name="formulaDeltaVo2">Fórmula:\n\n\u0394Vo = Vp/(2*f*R*C)</string>
+    <string name="formulaCapacitancia">Fórmula:\n\nC = Vp/(2*f*R*\u0394Vo)</string>
+</resources>

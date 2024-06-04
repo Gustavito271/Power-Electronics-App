@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trifasico_formulaTensaoMedia">Fórmula:\n\nV0(DC) = 1.35*VL</string>
+    <string name="trifasico_formulaCorrenteMedia">Fórmula:\n\nI0(DC) = V0(DC)/R</string>
+
+    <string name="trifasico_formulaTensaoEficaz">Fórmula:\n\nV0(rms) = 1.3516*VL</string>
+    <string name="trifasico_formulaCorrenteEficaz">Fórmula:\n\nI0(rms) = V0(rms)/R</string>
+
+    <string name="trifasico_formulaTensaoCA">Fórmula:\n\nV0(AC) = \u221a(V0(rms)² - V0(DC)²)</string>
+    <string name="trifasico_formulaCorrenteCA">Fórmula:\n\nI0(AC) = V0(AC)/R</string>
+
+    <string name="trifasico_formulaPotenciaMedia">Fórmula:\n\nP0(DC) = V0(DC)*I0(DC)</string>
+    <string name="trifasico_formulaPotenciaEficaz">Fórmula:\n\nP0(rms) = V0(rms)*I0(rms)</string>
+    <string name="trifasico_formulaRendimento">Fórmula:\n\n\u03b7 = P0(DC)/P0(rms)</string>
+
+    <string name="trifasico_formulaCorrenteEficaz2">Fórmula:\n\nI0(rms) = I0(DC)</string>
+    <string name="trifasico_formulaCorrenteCA2">Fórmula:\n\nI0(AC) = 0</string>
+
+    <string name="trifasico_formulaTensaoMedia2">Fórmula:\n\nV0(DC) = Vp</string>
+    <string name="trifasico_formulaTensaoEficaz2">Fórmula:\n\nV0(rms) = V0(DC)</string>
+    <string name="trifasico_formulaTensaoCA2">Fórmula:\n\nV0(AC) = 0</string>
+
+    <string name="trifasico_formulaCorrenteDiodoFAV">Fórmula:\n\nIF(rms) = I0(DC)/3</string>
+    <string name="trifasico_formulaCorrenteDiodoRMS">Fórmula:\n\nIF(AV) = I0(rms)/\u221a3</string>
+
+</resources>

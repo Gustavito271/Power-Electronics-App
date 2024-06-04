@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultCACC">
+
+    <ImageButton
+        android:id="@+id/voltar_resCCCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voltar_resCCCC">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/box_res_valor_fonte_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores de Entrada:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resTensaoFonteCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteFonteCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_valor_medio_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores Médios:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resTensaoMediaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteMediaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_chaveamento_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Chaveamento:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resCicloCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteChaveamentoCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCorrenteDiodoCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_carga_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores de Carga:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resResistenciaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resIndutanciaCargaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_filtro_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores de Filtro:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resIndutanciaFiltroCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCapacitanciaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_minimos_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Valores Mínimos:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resIndutanciaMinCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resCapacitanciaMinCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_oscilacoes_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Oscilações na Carga:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resOscilacaoTensaoCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resOscilacaoCorrenteCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_res_potencias_CCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_corner"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Potências:"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resPotenciaEntradaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resPotenciaSaidaCCCC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

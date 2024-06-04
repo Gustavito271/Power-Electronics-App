@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    tools:context=".ConversorCACC">
+
+    <ImageButton
+        android:id="@+id/voltar_cacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Retificadores"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline2">
+
+            <LinearLayout
+                android:id="@+id/box_tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Retificador" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/tipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="-5dp"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:padding="0dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_mon_tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Onda" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/tipo_onda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="-5dp"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:padding="0dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_carga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha o tipo de Carga" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/carga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/box_dados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dados Disponíveis" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/round_corner">
+
+                    <Spinner
+                        android:id="@+id/dados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overlapAnchor="false"
+                        android:padding="0dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_tensao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tensaoFonte"/>
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editTensaoCACC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeTensao"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tensaoPico"/>
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editTensaoPCACC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeTensao"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/resistenciaCarga" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editResCACC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeResistencia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_delta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/deltaVo" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editDelta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadePercentual"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_cap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/capacitanciaCarga" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editCapCACC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeCapacitancia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/texto_freq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/frequencia" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editFreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/unidadeFrequencia"
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <Button
+            android:id="@+id/continuar_cacc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="#74ad85"
+            android:text="Resultados"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

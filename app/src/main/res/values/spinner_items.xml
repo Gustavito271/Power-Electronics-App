@@ -32,7 +32,7 @@
     <string name="spinner_frequencia">Frequência</string>
 
     <string name="spinner_tensaoEntrada">Tensão de Entrada</string>
-    <string name="spinner_TensaoSaida">Tensão Médida de Saída</string>
+    <string name="spinner_TensaoSaida">Tensão Média de Saída</string>
     <string name="spinner_cicloTrabalho">Ciclo de Trabalho</string>
     <string name="spinner_frequencia_chaveamento">Frequência de Chaveamento</string>
     <string name="spinner_indutanciaCarga">Indutância da Carga</string>

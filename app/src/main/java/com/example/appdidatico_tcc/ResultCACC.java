@@ -155,7 +155,7 @@ public class ResultCACC extends AppCompatActivity {
         double powerDC, powerEffective;
         double performance;
         double voltageFF, voltageRF;
-        double currentFF, currentFR;
+        double currentFF, currentRF;
 
         avgVoltage = peakVoltage /Math.PI;
         avgCurrent = avgVoltage/ resistance;
@@ -175,7 +175,7 @@ public class ResultCACC extends AppCompatActivity {
         voltageRF = voltageCA/avgVoltage;
 
         currentFF = effectiveCurrent/avgCurrent;
-        currentFR = currentCA/avgCurrent;
+        currentRF = currentCA/avgCurrent;
 
         ansVin.setText(formatter.formatString("VS = " + formatter.notationValue(voltage, "V"), 1, 2));
         ansVinPeak.setText(formatter.formatString("Vp = " + formatter.notationValue(peakVoltage, "V"), 1, 2));
@@ -193,11 +193,11 @@ public class ResultCACC extends AppCompatActivity {
         ansPowerCA.setText(formatter.formatString("Po(rms) = " + formatter.notationValue(powerEffective, "W"), 1, 7));
         ansPerformance.setText(getString(R.string.eta) + " = " + formatter.notationValue(performance, "%"));
 
-        ansVoltageFF.setText("FF = " + String.format("%.2f", voltageFF));
-        ansVoltageRF.setText("FR = " + String.format("%.2f", voltageRF));
+        ansVoltageFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageFF) : "-"));
+        ansVoltageRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageRF) : "-"));
 
-        ansCurrentFF.setText("FF = " + String.format("%.2f", currentFF));
-        ansCurrentRF.setText("FR = " + String.format("%.2f", currentFR));
+        ansCurrentFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentFF) : "-"));
+        ansCurrentRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentRF) : "-"));
 
     }
 
@@ -333,17 +333,18 @@ public class ResultCACC extends AppCompatActivity {
         ansCurrentDiode.setText(formatter.formatString("IF(rms) = " + formatter.notationValue(diodeCurrentEffective, "A"), 1, 7));
         ansVoltagediode.setText(formatter.formatString("VRRM = " + formatter.notationValue(diodeVoltage, "V"), 1, 4));
 
-        ansVoltageFF.setText("FF = " + String.format("%.2f", voltageFF));
-        ansVoltageRF.setText("FR = " + String.format("%.2f", voltageRF));
+        ansVoltageFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageFF) : "-"));
+        ansVoltageRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageRF) : "-"));
 
-        ansCurrentFF.setText("FF = " + String.format("%.2f", currentFF));
-        ansCurrentRF.setText("FR = " + String.format("%.2f", currentRF));
+        ansCurrentFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentFF) : "-"));
+        ansCurrentRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentRF) : "-"));
 
         ansVoltageOscilation.setText(formatter.formatString(getString(R.string.delta) + "Vo = " + formatter.notationValue(oscilation, "V"), 2, 3));
         ansCapacitance.setText("C = " + formatter.notationValue(capacitance, "F"));
     }
 
     private void threeEquations() {
+        oscilationCapacitance.setVisibility(View.GONE);
         defaultEquations();
 
         if (load.equals(getString(R.string.RLoad))) {
@@ -398,8 +399,8 @@ public class ResultCACC extends AppCompatActivity {
         double powerCC, powerEffective;
         double performance;
         double diodeCurrentFAV, currentDiodeRMS, diodeVoltage;
-        double voltageFF, voltageFR;
-        double currentFF, currentFR;
+        double voltageFF, voltageRF;
+        double currentFF, currentRF;
         boolean isR = load.equals(getString(R.string.RLoad));
         boolean isRC = load.equals(getString(R.string.CACC_RCLoad));
 
@@ -449,10 +450,10 @@ public class ResultCACC extends AppCompatActivity {
         diodeVoltage = 1.2* peakVoltage;
 
         voltageFF = effectiveVoltage/avgVoltage;
-        voltageFR = voltageCA/avgVoltage;
+        voltageRF = voltageCA/avgVoltage;
 
         currentFF = effectiveCurrent/avgCurrent;
-        currentFR = currentCA/avgCurrent;
+        currentRF = currentCA/avgCurrent;
 
         ansVin.setText(formatter.formatString("VL = " + formatter.notationValue(voltage, "V"), 1, 2));
         ansVinPeak.setText(formatter.formatString("Vp = " + formatter.notationValue(peakVoltage, "V"), 1, 2));
@@ -475,10 +476,10 @@ public class ResultCACC extends AppCompatActivity {
         ansVoltagediode.setText(formatter.formatString("VRRM = " + formatter.notationValue(diodeVoltage, "V"), 1, 4));
 
         ansVoltageFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageFF) : ""));
-        ansVoltageRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageFR) : ""));
+        ansVoltageRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", voltageRF) : ""));
 
         ansCurrentFF.setText("FF = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentFF) : ""));
-        ansCurrentRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentFR) : ""));
+        ansCurrentRF.setText("FR = " + (!Double.isNaN(voltageFF) ? String.format("%.2f", currentRF) : ""));
 
         ansVoltageOscilation.setText(formatter.formatString(getString(R.string.delta) + "Vo = " + formatter.notationValue(oscilation, "V"), 2, 3));
         ansCapacitance.setText("C = " + formatter.notationValue(capacitance,"F"));

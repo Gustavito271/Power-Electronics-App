@@ -172,7 +172,8 @@ public class ResultCCCC extends AppCompatActivity {
         ansAvgVoltage.setText(formatter.formatString("Vo(avg) = " + formatter.notationValue(avgVoltage, "V"), 1, 7));
         ansAvgCurrent.setText(formatter.formatString("Io(avg) = " + formatter.notationValue(avgCurrent, "A"), 1, 7));
 
-        ansCycle.setText("D = " + String.format("%.2f", cycle));
+
+        ansCycle.setText("D = " + (!Double.isNaN(cycle) ? String.format("%.2f", cycle) : "-"));
         ansTransistorCurrent.setText(formatter.formatString("Ich = " + formatter.notationValue(transistorCurrent, "A"), 1, 3));
         ansDiodeCurrent.setText(formatter.formatString("ID = " + formatter.notationValue(diodeCurrent, "A"), 1, 2));
 
@@ -237,7 +238,7 @@ public class ResultCCCC extends AppCompatActivity {
         ansAvgVoltage.setText(formatter.formatString("Vo(avg) = " + formatter.notationValue(avgVoltage, "V"), 1, 7));
         ansAvgCurrent.setText(formatter.formatString("Io(avg) = " + formatter.notationValue(avgCurrent, "A"), 1, 7));
 
-        ansCycle.setText("D = " + String.format("%.2f", cycle));
+        ansCycle.setText("D = " + (!Double.isNaN(cycle) ? String.format("%.2f", cycle) : "-"));
         ansTransistorCurrent.setText(formatter.formatString("Ich = " + formatter.notationValue(transistorCurrent,"A"), 1, 3));
         ansDiodeCurrent.setText(formatter.formatString("ID = " + formatter.notationValue(diodeCurrent, "A"), 1, 2));
 
@@ -330,7 +331,7 @@ public class ResultCCCC extends AppCompatActivity {
         ansAvgVoltage.setText(formatter.formatString("Vo(avg) = " + formatter.notationValue(avgVoltage, "V"), 1, 7));
         ansAvgCurrent.setText(formatter.formatString("Io(avg) = " + formatter.notationValue(avgCurrent, "A"), 1, 7));
 
-        ansCycle.setText("D = " + String.format("%.2f", cycle));
+        ansCycle.setText("D = " + (!Double.isNaN(cycle) ? String.format("%.2f", cycle) : "-"));
         ansTransistorCurrent.setText(formatter.formatString("Ich = " + formatter.notationValue(transistorCurrent, "A"), 1, 3));
         ansDiodeCurrent.setText(formatter.formatString("ID = " + formatter.notationValue(diodeCurrent, "A"), 1, 2));
 

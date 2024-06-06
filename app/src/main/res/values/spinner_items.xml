@@ -41,5 +41,6 @@
     <string name="spinner_capacitanciaFiltro">Capacitância do Filtro</string>
 
     <string name="spinner_modulacaoAmplitude">Modulação em Amplitude</string>
+    <string name="spinner_frequenciaReferencia">Frequência de Referência</string>
 
 </resources>

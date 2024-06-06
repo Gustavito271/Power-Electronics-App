@@ -128,12 +128,12 @@ public class ResultCCCA extends AppCompatActivity {
         currentRMS.transformToCartesian();
 
         ansVoltageRMS.setText(formatter.formatString("Vo(rms) = " + formatter.notationValue(voltageRMS, "V"), 1, 7));
-        ansCurrentRMS.setText(formatter.formatString("Io(rms) = " + formatter.formatComplexValues(currentRMS)+ " A", 1, 7));
+        ansCurrentRMS.setText(formatter.formatString("Io(rms) = " + formatter.formatComplexValues(currentRMS, " A"), 1, 7));
 
         ansResistance.setText("R = " + formatter.notationValue(resistance, getString(R.string.ohm)));
         ansInductiveReact.setText(formatter.formatString("XL = " + formatter.notationValue(inductiveReact, getString(R.string.ohm)), 1, 2));
 
-        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent) + " VA");
+        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent, " VA"));
         activePower.setText("P = " + formatter.notationValue(powerActive, "W"));
         reactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
 
@@ -185,15 +185,15 @@ public class ResultCCCA extends AppCompatActivity {
         currentL.transformToCartesian();
 
         ansVoltageL.setText(formatter.formatString("VL = " + formatter.notationValue(voltageL, "V"), 1, 2));
-        ansCurrentL.setText(formatter.formatString("IL = " + formatter.formatComplexValues(currentL)+ " A", 1, 2));
+        ansCurrentL.setText(formatter.formatString("IL = " + formatter.formatComplexValues(currentL, " A"), 1, 2));
 
         ansVoltageF.setText(formatter.formatString("Vf = " + formatter.notationValue(voltageF, "V"), 1, 2));
-        ansCurrentF.setText(formatter.formatString("If = " + formatter.formatComplexValues(currentF)+ " A", 1, 2));
+        ansCurrentF.setText(formatter.formatString("If = " + formatter.formatComplexValues(currentF, " A"), 1, 2));
 
         ansResistance.setText("R = " + formatter.notationValue(resistance, getString(R.string.ohm)));
         ansInductiveReact.setText(formatter.formatString("XL = " + formatter.notationValue(inductiveReact, getString(R.string.ohm)), 1, 2));
 
-        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent) + " VA");
+        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent, " VA"));
         activePower.setText("P = " + formatter.notationValue(powerActive, "W"));
         reactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
 

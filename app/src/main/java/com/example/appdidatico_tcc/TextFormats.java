@@ -161,13 +161,14 @@ public class TextFormats {
      * @param value Complex value containg real and imaginary parts
      * @return String in the right format.
      */
-    public String formatComplexValues(ComplexValue value) {
+    public String formatComplexValues(ComplexValue value, String unit) {
         String realPart = cientificNotationValue(value.getRealPart());
         String imaginaryPart = cientificNotationValue(Math.abs(value.getImaginaryPart()));
         String operation = (value.getImaginaryPart() < 0 ? " - " : " + ");
 
         return  (!Double.isNaN(value.getRealPart()) ? realPart : "") +
-                (value.getImaginaryPart() != 0 || !Double.isNaN(value.getImaginaryPart()) ? (operation + "j" + imaginaryPart) : "");
+                (value.getImaginaryPart() != 0 && !Double.isNaN(value.getImaginaryPart()) ? (operation + "j" + imaginaryPart) : "") +
+            (Double.isNaN(value.getRealPart()) && Double.isNaN(value.getImaginaryPart()) ? "-" : unit);
     }
 
     /**

@@ -131,7 +131,7 @@ public class ConversorCCCA extends AppCompatActivity {
 
         String[] select_qualification = new String[] {
             getString(R.string.selecione), getString(R.string.spinner_modulacaoAmplitude), getString(R.string.spinner_tensaoEntrada),
-            getString(R.string.spinner_resistencia), getString(R.string.spinner_indutanciaCarga), getString(R.string.spinner_frequencia)
+            getString(R.string.spinner_resistencia), getString(R.string.spinner_indutanciaCarga), getString(R.string.spinner_frequenciaReferencia)
         };
 
         EditText[] editTexts = new EditText[] {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Didatico -TCC</string>
+    <string name="app_name">App Didatico - Eletrônica de Potência</string>
     <string name="explanation">Boas-vindas!!! \n\nA seguir é possível realizar o dimensionamento dos mais diferentes tipos de conversores existentes. \n\nPor favor, selecione abaixo a opção que mais se encaixa no seu caso de uso atual!</string>
     <string name="eta">\u03b7</string>
     <string name="square_root_symbol">\u221a</string>

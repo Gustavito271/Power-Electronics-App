@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">App Didatico -TCC</string>
-    <string name="sizing_explanation">A seguir é possível realizar o dimensionamento dos mais diferentes tipos de conversores existentes. \n\nPor favor, selecione abaixo a opção que mais se encaixa no seu caso de uso atual!</string>
+    <string name="explanation">Boas-vindas!!! \n\nA seguir é possível realizar o dimensionamento dos mais diferentes tipos de conversores existentes. \n\nPor favor, selecione abaixo a opção que mais se encaixa no seu caso de uso atual!</string>
     <string name="eta">\u03b7</string>
     <string name="square_root_symbol">\u221a</string>
     <string name="pi">\u03C0</string>]
@@ -26,13 +26,14 @@
     <string name="outPhaseValues">Valores de Saída (Fase):</string>
 
     <!--Unidades-->
-    <string name="semUnidade">(Sem Unidade)</string>
-    <string name="unidadePercentual">(% - Percentual)</string>
-    <string name="unidadeTensao">(V - Volts)</string>
-    <string name="unidadeResistencia">(\u03a9 - Ohms)</string>
-    <string name="unidadeIndutancia">(mH - Milihenry)</string>
-    <string name="unidadeCapacitancia">(\u00b5F - Microfarads)</string>
-    <string name="unidadeFrequencia">(Hz - Hertz)</string>
+    <string name="noUnit">(Sem Unidade)</string>
+    <string name="unitPercentage">(% - Percentual)</string>
+    <string name="unitVoltage">(V - Volts)</string>
+    <string name="unitResistance">(\u03a9 - Ohms)</string>
+    <string name="unitInductance">(mH - Milihenry)</string>
+    <string name="unitCapacitance">(\u00b5F - Microfarads)</string>
+    <string name="unitFrequency">(Hz - Hertz)</string>
+    <string name="unitPower">(W - Watt)</string>
 
     <!--Conversor Parameters Texts-->
     <string name="tensaoVs">Tensão da Fonte (Vs)</string>
@@ -43,6 +44,8 @@
     <string name="deltaVo">Oscilação da Tensão (\u0394V<font size="8">o</font>)</string>
     <string name="capacitanciaCarga">Capacitância da Carga (C)</string>
     <string name="frequencia">Frequência (f)</string>
+    <string name="power">Potência Média</string>
+    <string name="powerRMS">Potência Eficaz</string>
 
     <string name="tensaoEntrada">Tensão de Entrada (V<font size="8">in</font>)</string>
     <string name="tensaoSaida">Tensão de Saída (V<font size="8">out</font>)</string>

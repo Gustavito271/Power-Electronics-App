@@ -94,20 +94,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/resTensaoRMS_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
 
                     <TextView
                         android:id="@+id/resCorrenteRMS_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
@@ -137,20 +137,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/resTensaoL_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
 
                     <TextView
                         android:id="@+id/resCorrenteL_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
@@ -180,20 +180,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/resTensaoF_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
 
                     <TextView
                         android:id="@+id/resCorrenteF_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />
@@ -223,12 +223,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/resPotenciaAparente_CCCA"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/resPotenciaAparenteModulo_CCCA"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:layout_marginVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center" />

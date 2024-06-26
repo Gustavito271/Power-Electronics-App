@@ -146,6 +146,7 @@ public class ResultCCCC extends AppCompatActivity {
         boxFilter.setVisibility(View.GONE);
         boxMinimum.setVisibility(View.GONE);
         ansLoadIndutance.setVisibility(View.GONE);
+        ansDiodeCurrent.setVisibility(View.GONE);
     }
 
     private void resultsRLoad() {
@@ -161,7 +162,7 @@ public class ResultCCCC extends AppCompatActivity {
         sourceCurrent = avgCurrent* cycle;
 
         transistorCurrent = avgCurrent* cycle;
-        diodeCurrent = avgCurrent*(1- cycle);
+//        diodeCurrent = avgCurrent*(1- cycle);
 
         powerSource = initialVoltage * sourceCurrent;
         powerAvg = avgVoltage * avgCurrent;
@@ -175,7 +176,7 @@ public class ResultCCCC extends AppCompatActivity {
 
         ansCycle.setText("D = " + (!Double.isNaN(cycle) ? String.format("%.2f", cycle) : "-"));
         ansTransistorCurrent.setText(formatter.formatString("Ich = " + formatter.notationValue(transistorCurrent, "A"), 1, 3));
-        ansDiodeCurrent.setText(formatter.formatString("ID = " + formatter.notationValue(diodeCurrent, "A"), 1, 2));
+//        ansDiodeCurrent.setText(formatter.formatString("ID = " + formatter.notationValue(diodeCurrent, "A"), 1, 2));
 
         ansSourcePower.setText(formatter.formatString("Pin = " + formatter.notationValue(powerSource, "W"), 1, 3));
         ansAvgPower.setText(formatter.formatString("Po = " + formatter.notationValue(powerAvg, "W"), 1, 2));

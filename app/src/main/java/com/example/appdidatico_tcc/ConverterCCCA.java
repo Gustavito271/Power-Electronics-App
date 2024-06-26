@@ -24,7 +24,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class ConversorCCCA extends AppCompatActivity {
+public class ConverterCCCA extends AppCompatActivity {
 
     Button nextButton;
     ImageButton backButton;
@@ -37,7 +37,7 @@ public class ConversorCCCA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_conversor_ccca);
+        setContentView(R.layout.activity_converter_ccca);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -153,13 +153,13 @@ public class ConversorCCCA extends AppCompatActivity {
             listVOs.add(stateVO);
         }
 
-        CustomAdapter myAdapter = new CustomAdapter(ConversorCCCA.this, 0, listVOs);
+        CustomAdapter myAdapter = new CustomAdapter(ConverterCCCA.this, 0, listVOs);
         spinnerData.setAdapter(myAdapter);
     }
 
     private void nextButtonConfig() {
         nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ConversorCCCA.this, ResultCCCA.class);
+            Intent intent = new Intent(ConverterCCCA.this, ResultCCCA.class);
             put(intent, getString(R.string.key_amplitudeModulation), editAmpModulation);
             put(intent, getString(R.string.key_initialVoltage), editInitialVoltage);
             put(intent, getString(R.string.key_resistance), editResistance);

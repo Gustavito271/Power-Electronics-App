@@ -16,4 +16,7 @@
     <string name="key_filterIndutance">indutanciaFiltro</string>
     <string name="key_amplitudeModulation">modulacaoAmplitude</string>
     <string name="key_format">formato</string>
+    <string name="key_power">potencia</string>
+    <string name="key_powerRMS">potenciaRMS</string>
+
 </resources>

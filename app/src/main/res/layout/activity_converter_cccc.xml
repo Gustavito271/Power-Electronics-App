@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    tools:context=".ConversorCCCC">
+    tools:context=".ConverterCCCC">
 
     <ImageButton
         android:id="@+id/voltar_cccc"
@@ -159,7 +159,7 @@
                 android:id="@+id/editTensaoCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeTensao"
+                android:hint="@string/unitVoltage"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -176,7 +176,7 @@
                 android:id="@+id/editTensaoSaidaCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeTensao"
+                android:hint="@string/unitVoltage"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -193,7 +193,7 @@
                 android:id="@+id/editResCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeResistencia"
+                android:hint="@string/unitResistance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -210,7 +210,7 @@
                 android:id="@+id/editCicloCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/semUnidade"
+                android:hint="@string/noUnit"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -227,7 +227,7 @@
                 android:id="@+id/editIndCargaCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeIndutancia"
+                android:hint="@string/unitInductance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -244,7 +244,7 @@
                 android:id="@+id/editIndFiltroCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeIndutancia"
+                android:hint="@string/unitInductance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -261,7 +261,7 @@
                 android:id="@+id/editCapCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeCapacitancia"
+                android:hint="@string/unitCapacitance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -278,7 +278,7 @@
                 android:id="@+id/editDeltaTensaoCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadePercentual"
+                android:hint="@string/unitPercentage"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -295,7 +295,7 @@
                 android:id="@+id/editDeltaCorrenteCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadePercentual"
+                android:hint="@string/unitPercentage"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
 
@@ -312,7 +312,7 @@
                 android:id="@+id/editFreqCCCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeFrequencia"
+                android:hint="@string/unitFrequency"
                 android:inputType="numberDecimal"
                 android:textSize="14sp" />
         </LinearLayout>

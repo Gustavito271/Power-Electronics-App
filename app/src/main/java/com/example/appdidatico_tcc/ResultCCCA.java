@@ -19,7 +19,7 @@ public class ResultCCCA extends AppCompatActivity {
     String type, format;
     TextView ansVoltageRMS, ansCurrentRMS, ansVoltageL, ansCurrentL, ansVoltageF, ansCurrentF;
     TextView ansResistance, ansInductiveReact;
-    TextView apparentPower, activePower, reactivePower;
+    TextView ansApparentPower, ansActivePower, ansReactivePower, ansApparentPowerModule;
     LinearLayout boxRMS, boxLine, boxPhase;
     ImageButton backButton;
     TextFormats formatter;
@@ -52,11 +52,11 @@ public class ResultCCCA extends AppCompatActivity {
         backButtonConfig();
 
         if (type.equals(getString(R.string.Monophase))) {
-            monoEquations();
-            monoResults();
+            equationsMono();
+            resultsMono();
         } else if (type.equals(getString(R.string.Threephase))) {
-            threeEquations();
-            threeResults();
+            equationsThree();
+            resultsThree();
         }
     }
 
@@ -70,9 +70,10 @@ public class ResultCCCA extends AppCompatActivity {
         ansVoltageF = findViewById(R.id.resTensaoF_CCCA);
         ansCurrentF = findViewById(R.id.resCorrenteF_CCCA);
 
-        apparentPower = findViewById(R.id.resPotenciaAparente_CCCA);
-        activePower = findViewById(R.id.resPotenciaAtiva_CCCA);
-        reactivePower = findViewById(R.id.resPotenciaReativa_CCCA);
+        ansApparentPower = findViewById(R.id.resPotenciaAparente_CCCA);
+        ansApparentPowerModule = findViewById(R.id.resPotenciaAparenteModulo_CCCA);
+        ansActivePower = findViewById(R.id.resPotenciaAtiva_CCCA);
+        ansReactivePower = findViewById(R.id.resPotenciaReativa_CCCA);
 
         boxRMS = findViewById(R.id.valorRMS_resCCCA);
         boxLine = findViewById(R.id.valorL_resCCCA);
@@ -88,26 +89,26 @@ public class ResultCCCA extends AppCompatActivity {
     private void defaultEquations() {
         ansInductiveReact.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationInductance), 1,2));
 
-        activePower.setTooltipText(getString(R.string.CCCA_equationP));
-        reactivePower.setTooltipText(getString(R.string.CCCA_equationQ));
+        ansActivePower.setTooltipText(getString(R.string.CCCA_equationP));
+        ansReactivePower.setTooltipText(getString(R.string.CCCA_equationQ));
     }
 
-    private void monoEquations() {
+    private void equationsMono() {
         defaultEquations();
         ansVoltageRMS.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationVoltage), 1,7, 11, 12, 15,20));
         ansCurrentRMS.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationCurrent), 1,7, 11, 17, 25, 26));
 
-        apparentPower.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationSMono), 5,11, 13, 19));
+        ansApparentPower.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationSMono), 5,11, 13, 19));
 
         boxLine.setVisibility(View.GONE);
         boxPhase.setVisibility(View.GONE);
     }
 
     @SuppressLint("SetTextI18n")
-    private void monoResults() {
+    private void resultsMono() {
         double voltageRMS;
         double inductiveReact;
-        double powerActive, powerReactive;
+        double powerActive, powerReactive, powerApparentModule;
         ComplexValue reactance, currentRMS, powerApparent;
 
         voltageRMS = ampModulation*voltage/Math.sqrt(2);
@@ -125,6 +126,8 @@ public class ResultCCCA extends AppCompatActivity {
         powerActive = powerApparent.getRealPart();
         powerReactive = powerApparent.getImaginaryPart();
 
+        powerApparentModule = Math.sqrt(Math.pow(powerApparent.getRealPart(), 2) + Math.pow(powerApparent.getImaginaryPart(), 2) );
+
         currentRMS.transformToCartesian();
 
         ansVoltageRMS.setText(formatter.formatString("Vo(rms) = " + formatter.notationValue(voltageRMS, "V"), 1, 7));
@@ -133,16 +136,17 @@ public class ResultCCCA extends AppCompatActivity {
         ansResistance.setText("R = " + formatter.notationValue(resistance, getString(R.string.ohm)));
         ansInductiveReact.setText(formatter.formatString("XL = " + formatter.notationValue(inductiveReact, getString(R.string.ohm)), 1, 2));
 
-        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent, " VA"));
-        activePower.setText("P = " + formatter.notationValue(powerActive, "W"));
-        reactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
+        ansApparentPowerModule.setText("|S| = " + formatter.notationValue(powerApparentModule, "VA"));
+        ansApparentPower.setText("Ṡ = " + formatter.formatComplexValues(powerApparent, " VA"));
+        ansActivePower.setText("P = " + formatter.notationValue(powerActive, "W"));
+        ansReactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
 
         if (inductance == 0) {
             ansInductiveReact.setVisibility(View.GONE);
         }
     }
 
-    private void threeEquations() {
+    private void equationsThree() {
         defaultEquations();
         boolean isDelta = format.equals(getString(R.string.CCCA_delta));
         ansVoltageL.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationLineVoltage), 1,2, 11, 12, 14,19));
@@ -151,16 +155,17 @@ public class ResultCCCA extends AppCompatActivity {
         ansVoltageF.setTooltipText(formatter.formatString(isDelta ? getString(R.string.CCCA_equationPhaseVoltageDelta) : getString(R.string.CCCA_equationPhaseVoltageStar), 1,2, 6, 7));
         ansCurrentF.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationPhaseCurrent), 1,2, 6, 7, 15, 16));
 
-        apparentPower.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationSThree), 8,9, 11, 12));
+        ansApparentPower.setTooltipText(formatter.formatString(getString(R.string.CCCA_equationSThree), 8,9, 11, 12));
+        ansApparentPowerModule.setTooltipText(getString(R.string.CCCA_equationSThreeModule));
         boxRMS.setVisibility(View.GONE);
     }
 
     @SuppressLint("SetTextI18n")
-    private void threeResults() {
+    private void resultsThree() {
         boolean isDelta = format.equals(getString(R.string.CCCA_delta));
         double voltageL, voltageF;
         double inductiveReact;
-        double powerActive, powerReactive;
+        double powerActive, powerReactive, powerApparentModule;
         ComplexValue reactance, currentL, currentF, powerApparent;
 
         voltageL = 0.612*ampModulation*voltage;
@@ -175,27 +180,30 @@ public class ResultCCCA extends AppCompatActivity {
 
         currentL = new ComplexValue(!isDelta ? currentF.getRealPart() : Math.sqrt(3)*currentF.getRealPart(), currentF.getImaginaryPart());
 
-        powerApparent = new ComplexValue(voltageL * currentL.getRealPart() * Math.sqrt(3), Math.abs(currentL.getImaginaryPart()));
+        powerApparent = new ComplexValue(voltageF * currentF.getRealPart() * 3, Math.abs(currentL.getImaginaryPart()));
+//        powerApparent = new ComplexValue(voltageL * currentL.getRealPart() * Math.sqrt(3), Math.abs(currentL.getImaginaryPart()));
         powerApparent.transformToCartesian();
 
         powerActive = powerApparent.getRealPart();
         powerReactive = powerApparent.getImaginaryPart();
 
+        powerApparentModule = Math.sqrt(Math.pow(powerApparent.getRealPart(), 2) + Math.pow(powerApparent.getImaginaryPart(), 2) );
         currentF.transformToCartesian();
         currentL.transformToCartesian();
 
         ansVoltageL.setText(formatter.formatString("VL = " + formatter.notationValue(voltageL, "V"), 1, 2));
-        ansCurrentL.setText(formatter.formatString("IL = " + formatter.formatComplexValues(currentL, " A"), 1, 2));
+        ansCurrentL.setText(formatter.formatString("İL = " + formatter.formatComplexValues(currentL, " A"), 1, 2));
 
         ansVoltageF.setText(formatter.formatString("Vf = " + formatter.notationValue(voltageF, "V"), 1, 2));
-        ansCurrentF.setText(formatter.formatString("If = " + formatter.formatComplexValues(currentF, " A"), 1, 2));
+        ansCurrentF.setText(formatter.formatString("İf = " + formatter.formatComplexValues(currentF, " A"), 1, 2));
 
         ansResistance.setText("R = " + formatter.notationValue(resistance, getString(R.string.ohm)));
         ansInductiveReact.setText(formatter.formatString("XL = " + formatter.notationValue(inductiveReact, getString(R.string.ohm)), 1, 2));
 
-        apparentPower.setText("S = " + formatter.formatComplexValues(powerApparent, " VA"));
-        activePower.setText("P = " + formatter.notationValue(powerActive, "W"));
-        reactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
+        ansApparentPowerModule.setText("|S| = " + formatter.notationValue(powerApparentModule, "VA"));
+        ansApparentPower.setText("Ṡ = " + formatter.formatComplexValues(powerApparent, " VA"));
+        ansActivePower.setText("P = " + formatter.notationValue(powerActive, "W"));
+        ansReactivePower.setText("Q = " + formatter.notationValue(powerReactive, "Var"));
 
         if (inductance == 0) {
             ansInductiveReact.setVisibility(View.GONE);

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    tools:context=".ConversorCCCA">
+    tools:context=".ConverterCCCA">
 
     <ImageButton
         android:id="@+id/voltar_ccca"
@@ -223,7 +223,7 @@
                 android:id="@+id/editModulacaoAmplitudeCCCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/semUnidade"
+                android:hint="@string/noUnit"
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:visibility="gone" />
@@ -241,7 +241,7 @@
                 android:id="@+id/editTensaoEntradaCCCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeTensao"
+                android:hint="@string/unitVoltage"
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:visibility="gone" />
@@ -259,7 +259,7 @@
                 android:id="@+id/editResistenciaCCCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeResistencia"
+                android:hint="@string/unitResistance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:visibility="gone" />
@@ -277,7 +277,7 @@
                 android:id="@+id/editIndutanciaCCCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeIndutancia"
+                android:hint="@string/unitInductance"
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:visibility="gone" />
@@ -295,7 +295,7 @@
                 android:id="@+id/editFrequenciaCCCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/unidadeFrequencia"
+                android:hint="@string/unitFrequency"
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:visibility="gone" />

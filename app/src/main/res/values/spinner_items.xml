@@ -12,6 +12,8 @@
     <string name="CACC_halfWave">Meia Onda</string>
     <string name="CACC_fullWave">Onda Completa</string>
     <string name="CACC_RCLoad">Carga RC</string>
+    <string name="CACC_Power">Potência Média de Saída</string>
+    <string name="CACC_PowerRMS">Potência Eficaz de Saída</string>
 
     <!--Spinner CCCC-->
     <string name="CCCC_RLoad">Carga R - Sem Filtro</string>

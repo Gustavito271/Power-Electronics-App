@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ResultCACC extends AppCompatActivity {
 
-    private double peakVoltage, resistance, capacitance, voltage, oscilation, frequency;
+    private double peakVoltage, resistance, capacitance, voltage, oscilation, frequency, power, powerRMS;
     private String type, wave, load;
     
     TextView ansVoCC, ansIoCC;
@@ -57,6 +57,8 @@ public class ResultCACC extends AppCompatActivity {
             capacitance = params.getDouble(getString(R.string.key_capacitance))/1000000;
             oscilation = params.getDouble(getString(R.string.key_voltageOscilation));
             frequency = params.getDouble(getString(R.string.key_frequency));
+            power = params.getDouble(getString(R.string.key_power));
+            powerRMS = params.getDouble(getString(R.string.key_powerRMS));
         }
 
         formatter = new TextFormats(this);
@@ -66,15 +68,15 @@ public class ResultCACC extends AppCompatActivity {
 
         if (type.equals(getString(R.string.Monophase))) {
             if (wave.equals(getString(R.string.CACC_halfWave))) {
-                monoHalfEquations();
-                monoHalfResults();
+                equationsMonoHalf();
+                resultsMonoHalf();
             } else if (wave.equals(getString(R.string.CACC_fullWave))){
-                monoFullEquations();
-                monoFullResults();
+                equationsMonoFull();
+                resultsMonoFull();
             }
         } else if (type.equals(getString(R.string.Threephase))) {
-            threeEquations();
-            threeResults();
+            equationsThree();
+            resultsThree();
         }
     }
 
@@ -132,7 +134,7 @@ public class ResultCACC extends AppCompatActivity {
 
     }
 
-    private void monoHalfEquations() {
+    private void equationsMonoHalf() {
         diode.setVisibility(View.GONE);
         oscilationCapacitance.setVisibility(View.GONE);
 
@@ -148,7 +150,7 @@ public class ResultCACC extends AppCompatActivity {
         ansIoCA.setTooltipText(formatter.formatString(getString(R.string.monofasicoM_formulaCorrenteCA), 11,16, 20, 25));
     }
 
-    private void monoHalfResults() {
+    private void resultsMonoHalf() {
         double avgVoltage, avgCurrent;
         double effectiveVoltage, effectiveCurrent;
         double voltageCA, currentCA;
@@ -158,12 +160,17 @@ public class ResultCACC extends AppCompatActivity {
         double currentFF, currentRF;
 
         avgVoltage = peakVoltage /Math.PI;
-        avgCurrent = avgVoltage/ resistance;
-
         effectiveVoltage = peakVoltage /2;
-        effectiveCurrent = effectiveVoltage/ resistance;
-
         voltageCA = Math.sqrt(Math.pow(effectiveVoltage, 2) - Math.pow(avgVoltage, 2));
+
+        if (resistance == 0 && power != 0) {
+            resistance = Math.pow(avgVoltage, 2)/power;
+        } else if (resistance == 0 && powerRMS != 0) {
+            resistance = Math.pow(effectiveVoltage, 2)/powerRMS;
+        }
+
+        avgCurrent = avgVoltage/ resistance;
+        effectiveCurrent = effectiveVoltage/ resistance;
         currentCA = voltageCA/ resistance;
 
         powerDC = avgVoltage*avgCurrent;
@@ -201,7 +208,7 @@ public class ResultCACC extends AppCompatActivity {
 
     }
 
-    private void monoFullEquations() {
+    private void equationsMonoFull() {
         defaultEquations();
 
         if (load.equals(getString(R.string.RLoad))) {
@@ -249,7 +256,7 @@ public class ResultCACC extends AppCompatActivity {
         ansCapacitance.setTooltipText(formatter.formatString(getString(R.string.formulaCapacitancia), 15,16, 23, 24));
     }
 
-    private void monoFullResults() {
+    private void resultsMonoFull() {
         double avgVoltage, avgCurrent;
         double effectiveVoltage, effectiveCurrent;
         double voltageCA, currentCA;
@@ -261,34 +268,49 @@ public class ResultCACC extends AppCompatActivity {
 
         if (load.equals(getString(R.string.RLoad))) {
             avgVoltage = (2* peakVoltage)/Math.PI;
-            avgCurrent = avgVoltage/ resistance;
-
             effectiveVoltage = peakVoltage /Math.sqrt(2);
-            effectiveCurrent = effectiveVoltage/ resistance;
-
             voltageCA = Math.sqrt(Math.pow(effectiveVoltage, 2) - Math.pow(avgVoltage, 2));
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = Math.pow(effectiveVoltage, 2)/powerRMS;
+            }
+
+            avgCurrent = avgVoltage/ resistance;
+            effectiveCurrent = effectiveVoltage/ resistance;
             currentCA = voltageCA/ resistance;
 
             oscilationCapacitance.setVisibility(View.GONE);
         } else if (load.equals(getString(R.string.RLLoad))){
             avgVoltage = (2* peakVoltage)/Math.PI;
-            avgCurrent = avgVoltage/ resistance;
-
             effectiveVoltage = peakVoltage /Math.sqrt(2);
-            effectiveCurrent = avgCurrent;
-
             voltageCA = Math.sqrt(Math.pow(effectiveVoltage, 2) - Math.pow(avgVoltage, 2));
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = effectiveVoltage*avgVoltage/powerRMS;
+            }
+
+            avgCurrent = avgVoltage/ resistance;
+            effectiveCurrent = avgCurrent;
             currentCA = 0;
 
             oscilationCapacitance.setVisibility(View.GONE);
         } else {
             avgVoltage = peakVoltage;
-            avgCurrent = peakVoltage / resistance;
-
             effectiveVoltage = peakVoltage;
-            effectiveCurrent = avgCurrent;
-
             voltageCA = 0;
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = Math.pow(effectiveVoltage, 2)/powerRMS;
+            }
+
+            avgCurrent = peakVoltage / resistance;
+            effectiveCurrent = avgCurrent;
             currentCA = 0;
 
             if (oscilation != 0) {
@@ -343,7 +365,7 @@ public class ResultCACC extends AppCompatActivity {
         ansCapacitance.setText("C = " + formatter.notationValue(capacitance, "F"));
     }
 
-    private void threeEquations() {
+    private void equationsThree() {
         oscilationCapacitance.setVisibility(View.GONE);
         defaultEquations();
 
@@ -392,7 +414,7 @@ public class ResultCACC extends AppCompatActivity {
         ansCapacitance.setTooltipText(formatter.formatString(getString(R.string.formulaCapacitancia), 15,16, 23, 24));
     }
 
-    private void threeResults() {
+    private void resultsThree() {
         double avgVoltage, avgCurrent;
         double effectiveVoltage, effectiveCurrent;
         double voltageCA, currentCA;
@@ -406,22 +428,32 @@ public class ResultCACC extends AppCompatActivity {
 
         if (isR) {
             avgVoltage = 1.35* voltage;
-            avgCurrent = avgVoltage/ resistance;
-
             effectiveVoltage = 1.3516* voltage;
-            effectiveCurrent = effectiveVoltage/ resistance;
-
             voltageCA = Math.sqrt(Math.pow(effectiveVoltage, 2) - Math.pow(avgVoltage, 2));
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = Math.pow(effectiveVoltage, 2)/powerRMS;
+            }
+
+            avgCurrent = avgVoltage/ resistance;
+            effectiveCurrent = effectiveVoltage/ resistance;
             currentCA = voltageCA/ resistance;
 
         } else if (isRC){
             avgVoltage = peakVoltage;
-            avgCurrent = avgVoltage/ resistance;
-
             effectiveVoltage = avgVoltage;
-            effectiveCurrent = avgCurrent;
-
             voltageCA = 0;
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = Math.pow(effectiveVoltage, 2)/powerRMS;
+            }
+
+            avgCurrent = avgVoltage/ resistance;
+            effectiveCurrent = avgCurrent;
             currentCA = 0;
 
             if (oscilation != 0) {
@@ -432,12 +464,17 @@ public class ResultCACC extends AppCompatActivity {
             }
         } else {
             avgVoltage = 1.35* voltage;
-            avgCurrent = avgVoltage/ resistance;
-
             effectiveVoltage = 1.3516* voltage;
-            effectiveCurrent = avgCurrent;
-
             voltageCA = Math.sqrt(Math.pow(effectiveVoltage, 2) - Math.pow(avgVoltage, 2));
+
+            if (resistance == 0 && power != 0) {
+                resistance = Math.pow(avgVoltage, 2)/power;
+            } else if (resistance == 0 && powerRMS != 0) {
+                resistance = effectiveVoltage*avgVoltage/powerRMS;
+            }
+
+            avgCurrent = avgVoltage/ resistance;
+            effectiveCurrent = avgCurrent;
             currentCA = 0;
         }
 

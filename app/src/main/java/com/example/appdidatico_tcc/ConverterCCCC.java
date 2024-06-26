@@ -23,7 +23,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class ConversorCCCC extends AppCompatActivity {
+public class ConverterCCCC extends AppCompatActivity {
 
     TextView initialVoltage, finalVoltage;
     TextView resistance, loadIndutance;
@@ -43,7 +43,7 @@ public class ConversorCCCC extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_conversor_cccc);
+        setContentView(R.layout.activity_converter_cccc);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -162,13 +162,13 @@ public class ConversorCCCC extends AppCompatActivity {
             listVOs.add(stateVO);
         }
 
-        CustomAdapter myAdapter = new CustomAdapter(ConversorCCCC.this, 0, listVOs);
+        CustomAdapter myAdapter = new CustomAdapter(ConverterCCCC.this, 0, listVOs);
         spinnerData.setAdapter(myAdapter);
     }
 
     private void nextButtonConfig() {
         nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ConversorCCCC.this, ResultCCCC.class);
+            Intent intent = new Intent(ConverterCCCC.this, ResultCCCC.class);
             put(intent,getString(R.string.key_cycle), editCycle);
             put(intent,getString(R.string.key_initialVoltage), editInitialVoltage);
             put(intent, getString(R.string.key_finalVoltage), editFinalVoltage);

@@ -14,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 public class CalculationsPage extends AppCompatActivity {
 
     Button convCACC, convCCCC, convCACA, convCCCA;
-    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +27,9 @@ public class CalculationsPage extends AppCompatActivity {
         });
 
         initializeComponents();
-        convConfigCACC();
-        convConfigCCCC();
-        convConfigCCCA();
-        backButtonConfig();
+        convCACCConfig();
+        convCCCCConfig();
+        convCCCAConfig();
     }
 
 
@@ -40,29 +38,25 @@ public class CalculationsPage extends AppCompatActivity {
         convCCCC = findViewById(R.id.btn_convCCCC);
         convCACA = findViewById(R.id.btn_convCACA);
         convCCCA = findViewById(R.id.btn_convCCCA);
-        backButton = findViewById(R.id.voltar_conv);
     }
 
-    private void backButtonConfig() {
-        backButton.setOnClickListener(v -> finish());
-    }
-    private void convConfigCACC() {
+    private void convCACCConfig() {
         convCACC.setOnClickListener(v -> {
-            Intent intent = new Intent(CalculationsPage.this, ConversorCACC.class);
+            Intent intent = new Intent(CalculationsPage.this, ConverterCACC.class);
             startActivity(intent);
         });
     }
 
-    private void convConfigCCCC() {
+    private void convCCCCConfig() {
         convCCCC.setOnClickListener(v -> {
-            Intent intent = new Intent(CalculationsPage.this, ConversorCCCC.class);
+            Intent intent = new Intent(CalculationsPage.this, ConverterCCCC.class);
             startActivity(intent);
         });
     }
 
-    private void convConfigCCCA() {
+    private void convCCCAConfig() {
         convCCCA.setOnClickListener(v -> {
-            Intent intent = new Intent(CalculationsPage.this, ConversorCCCA.class);
+            Intent intent = new Intent(CalculationsPage.this, ConverterCCCA.class);
             startActivity(intent);
         });
     }

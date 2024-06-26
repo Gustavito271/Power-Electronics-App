@@ -117,6 +117,8 @@ public class ConverterCCCC extends AppCompatActivity {
         visibilityFields(filterIndutance, editFilterIndutance, View.GONE);
         visibilityFields(filterCapacitance, editFilterCapacitance, View.GONE);
         visibilityFields(frequency, editFrequency, View.GONE);
+        visibilityFields(voltageOscilation, editVoltageOscilation, View.GONE);
+        visibilityFields(currentOscilation, editCurrentOscilation, View.GONE);
 
         String[] select_qualification = isR ?
             new String[] { getString(R.string.selecione), getString(R.string.spinner_tensaoEntrada), getString(R.string.spinner_TensaoSaida),
